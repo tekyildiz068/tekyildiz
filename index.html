@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tekyıldız Gaming - Türkiye'nin En Kaliteli Askeri & Polisiye MTA Roleplay Deneyimi. Hemen sunucumuza katılın!">
+    <title>Tekyıldız Gaming | Askeri & Polisiye Roleplay</title>
+    <link rel="icon" type="image/png" href="anadolu.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Animated Background -->
+    <div class="bg-effects">
+        <canvas id="particleCanvas"></canvas>
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        <!-- Logo Watermark Background -->
+        <div class="bg-logo-watermark">
+            <img src="anadolu.png" alt="" class="watermark-img watermark-1">
+            <img src="anadolu.png" alt="" class="watermark-img watermark-2">
+            <img src="anadolu.png" alt="" class="watermark-img watermark-3">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="anadolu.png" alt="Logo" class="nav-logo-img">
+                <span class="logo-text">Tekyıldız <span class="accent">Gaming</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero">Ana Sayfa</a></li>
+                <li><a href="#features">Özellikler</a></li>
+                <li><a href="#servers">Sunucu</a></li>
+                <li><a href="#rules">Kurallar</a></li>
+            </ul>
+            <a href="mtasa://185.255.92.62:29055" class="nav-btn">
+                <span class="btn-pulse"></span>
+                🎮 Hemen Katıl
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Menü">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#hero" onclick="closeMobile()">Ana Sayfa</a></li>
+            <li><a href="#features" onclick="closeMobile()">Özellikler</a></li>
+            <li><a href="#servers" onclick="closeMobile()">Sunucu</a></li>
+            <li><a href="#rules" onclick="closeMobile()">Kurallar</a></li>
+            <li><a href="mtasa://185.255.92.62:29055" class="nav-btn mobile" onclick="closeMobile()">🎮 Hemen Katıl</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="anadolu.png" alt="Tekyıldız Gaming Logo" class="hero-logo-img">
+            </div>
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                ONLINE — 24 Saat Aktif
+            </div>
+            <h1 class="hero-title">
+                <span class="line-1">Tekyıldız</span>
+                <span class="line-2">Gaming</span>
+            </h1>
+            <p class="hero-subtitle">Türkiye'nin En Kaliteli <span class="accent">Askeri & Polisiye Roleplay</span> Deneyimi</p>
+            <p class="hero-desc">San Andreas sokaklarında gerçekçi askeri operasyonlar, polisiye görevler ve derin roleplay. Vatanını koru, görevini yerine getir!</p>
+
+            <div class="hero-buttons">
+                <a href="mtasa://185.255.92.62:29055" class="btn btn-primary" id="joinServerBtn">
+                    <span class="btn-bg"></span>
+                    <span class="btn-content">🎮 Sunucuya Katıl</span>
+                </a>
+                <a href="https://multitheftauto.com/" target="_blank" class="btn btn-secondary" id="downloadMtaBtn">
+                    📥 MTA İndir
+                </a>
+                <a href="https://dosya.co/6w45s1y2l3g6/Gta_san_andreas_-_500_MB.rar.html" target="_blank" class="btn btn-secondary" id="downloadGtaBtn">
+                    🚗 GTA SA İndir
+                </a>
+                <button class="btn btn-discord" onclick="copyDiscord()" id="discordBtn">
+                    💬 Discord'a Katıl
+                </button>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="20">0</span>
+                    <span class="stat-label">Aktif Üye</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="24">0</span>
+                    <span class="stat-label">Saat Aktif</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="99">0</span>
+                    <span class="stat-label">Uptime %</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Neden Biz?</span>
+                <h2 class="section-title">Eşsiz <span class="accent">Özellikler</span></h2>
+                <p class="section-desc">Tekyıldız Gaming'de sizi bekleyen benzersiz askeri & polisiye sistemler ve deneyimler</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card" data-delay="0">
+                    <div class="feature-icon">🪖</div>
+                    <h3>Askeri RP Sistemi</h3>
+                    <p>Türk Silahlı Kuvvetleri birimlerine katılın, operasyon planlayın, üs savunun. Gerçekçi askeri hiyerarşi ve rütbe sistemi ile ilerleyin.</p>
+                </div>
+                <div class="feature-card" data-delay="100">
+                    <div class="feature-icon">👮</div>
+                    <h3>Polis & Jandarma</h3>
+                    <p>LSPD, Jandarma ve Özel Harekat birimlerinde görev alın. Suç şüphelilerini yakalayın, operasyon yürütün, şehri güvende tutun.</p>
+                </div>
+                <div class="feature-card" data-delay="200">
+                    <div class="feature-icon">🏛️</div>
+                    <h3>Devlet Sistemi</h3>
+                    <p>Hükümet, savcılık, mahkeme ve belediye sistemleri. Hukuki süreçler gerçekçi işler, suçlular yargılanır, adaleti siz sağlarsınız.</p>
+                </div>
+                <div class="feature-card" data-delay="300">
+                    <div class="feature-icon">🚁</div>
+                    <h3>Askeri Araçlar</h3>
+                    <p>Zırhlı araçlar, helikopterler, askeri kamyonlar ve özel ekipmanlar. 150+ özel askeri & polisiye araç modeli ile görev yapın.</p>
+                </div>
+                <div class="feature-card" data-delay="400">
+                    <div class="feature-icon">💣</div>
+                    <h3>Operasyon Sistemi</h3>
+                    <p>Yöneticiler tarafından düzenlenen canlı operasyonlar, baskınlar, rehine senaryoları. Her oyun farklı bir hikâye!</p>
+                </div>
+                <div class="feature-card" data-delay="500">
+                    <div class="feature-icon">⚖️</div>
+                    <h3>Suç & Ceza Sistemi</h3>
+                    <p>Gerçekçi suç kayıt sistemi, cezaevi, tahliye, ev hapsi. Suç işlersen yargılanır ve cezasını çekersin.</p>
+                </div>
+                <div class="feature-card" data-delay="600">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Anti-Cheat Koruması</h3>
+                    <p>Gelişmiş anti-cheat ve anti-bug sistemi ile %100 adil bir oyun ortamı. Otomatik tespit, anlık ban ve 7/24 yetkili denetimi.</p>
+                </div>
+                <div class="feature-card" data-delay="700">
+                    <div class="feature-icon">🎖️</div>
+                    <h3>Rütbe & Ödül Sistemi</h3>
+                    <p>Başarılı görevler ile rütbe atla, madalya kazan. En iyi askere, en iyi polise özel ödüller ve ayrıcalıklar.</p>
+                </div>
+                <div class="feature-card" data-delay="800">
+                    <div class="feature-icon">📻</div>
+                    <h3>Telsiz & İletişim</h3>
+                    <p>Gerçekçi telsiz sistemi, şifreli kanallar, birim içi iletişim. Komuta ile sürekli bağlantıda kal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Server Info Section -->
+    <section class="server-info" id="servers">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Sunucu</span>
+                <h2 class="section-title">Sunucu <span class="accent">Bilgileri</span></h2>
+                <p class="section-desc">Sunucumuza bağlanmak için gereken tüm bilgiler burada</p>
+            </div>
+
+            <div class="server-cards">
+                <div class="server-card main-card">
+                    <div class="card-glow"></div>
+                    <div class="status-indicator">
+                        <span class="status-dot online"></span>
+                        <span>ONLINE</span>
+                    </div>
+                    <h3>Tekyıldız Gaming</h3>
+                    <p class="server-mode">MTA:SA Askeri & Polisiye Roleplay</p>
+                    <div class="server-ip">
+                        <span class="ip-label">Sunucu IP Adresi</span>
+                        <div class="ip-box">
+                            <code id="serverIp">185.255.92.62:29055</code>
+                            <button class="copy-btn" onclick="copyIP()" id="copyIpBtn" aria-label="IP Kopyala">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="server-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Sunucu Tipi</span>
+                            <span class="detail-value">Askeri & Polisiye RP</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Harita</span>
+                            <span class="detail-value">San Andreas</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Dil</span>
+                            <span class="detail-value">Türkçe 🇹🇷</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Max Oyuncu</span>
+                            <span class="detail-value">150 Slot</span>
+                        </div>
+                    </div>
+                    <a href="mtasa://185.255.92.62:29055" class="btn btn-primary card-btn" id="connectBtn">
+                        <span class="btn-bg"></span>
+                        <span class="btn-content">⚡ Hızlı Bağlan</span>
+                    </a>
+                </div>
+
+                <div class="server-card">
+                    <div class="card-icon">👥</div>
+                    <h3>Topluluk</h3>
+                    <div class="card-stat">20+</div>
+                    <p>Aktif kayıtlı üye ile büyüyen askeri topluluğumuz</p>
+                </div>
+
+                <div class="server-card">
+                    <div class="card-icon">🛠️</div>
+                    <h3>Destek Ekibi</h3>
+                    <div class="card-stat">7/24</div>
+                    <p>Deneyimli admin ve moderatör ekibimiz her an yardıma hazır</p>
+                </div>
+
+                <div class="server-card">
+                    <div class="card-icon">🔄</div>
+                    <h3>Güncellemeler</h3>
+                    <div class="card-stat">Haftalık</div>
+                    <p>Her hafta yeni içerik, script güncellemeleri ve optimizasyonlar</p>
+                </div>
+
+                <div class="server-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Performans</h3>
+                    <div class="card-stat">%99.9</div>
+                    <p>Yüksek performanslı sunucu altyapısı ile kesintisiz oyun deneyimi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section class="rules" id="rules">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Kurallar</span>
+                <h2 class="section-title">Sunucu <span class="accent">Kuralları</span></h2>
+                <p class="section-desc">Adil, eğlenceli ve profesyonel bir roleplay ortamı için aşağıdaki kurallara uymanız gerekmektedir</p>
+            </div>
+
+            <div class="rules-grid">
+                <div class="rule-item">
+                    <div class="rule-number">01</div>
+                    <div class="rule-content">
+                        <h4>Hile & Cheat Yasağı</h4>
+                        <p>Aimbot, wallhack, speedhack, health hack ve her türlü üçüncü parti hile programı kullanımı kalıcı ban ile sonuçlanır.</p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <div class="rule-number">02</div>
+                    <div class="rule-content">
+                        <h4>Küfür & Hakaret</h4>
+                        <p>OOC ve IC fark etmeksizin küfür, hakaret, aşağılama ve ırkçılık kesinlikle yasaktır.</p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <div class="rule-number">03</div>
+                    <div class="rule-content">
+                        <h4>Yetkililere Saygı</h4>
+                        <p>Admin ve moderatör kararlarına itiraz etmek yasaktır. Şikâyetlerinizi Discord üzerinden iletebilirsiniz.</p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <div class="rule-number">04</div>
+                    <div class="rule-content">
+                        <h4>Reklam Yasağı</h4>
+                        <p>Başka sunucu, Discord veya herhangi bir platformun reklamını yapmak kalıcı ban ile sonuçlanır.</p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <div class="rule-number">05</div>
+                    <div class="rule-content">
+                        <h4>Bug & Exploit Kullanımı</h4>
+                        <p>Oyun içi hata ve açıkları kötüye kullanmak yasaktır. Bulduğunuz bugları yetkililere bildirmeniz ödüllendirilir.</p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <div class="rule-number">06</div>
+                    <div class="rule-content">
+                        <h4>Roleplay Kuralları</h4>
+                        <p>Powergaming (PG), metagaming (MG), revenge kill (RK) ve deathmatching (DM) gibi RP ihlalleri cezalandırılır.</p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <div class="rule-number">07</div>
+                    <div class="rule-content">
+                        <h4>Askeri Disiplin</h4>
+                        <p>Birlik komutanına itaatsizlik, izinsiz ateş açma ve görev terk etme askeri mahkeme ile sonuçlanır.</p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <div class="rule-number">08</div>
+                    <div class="rule-content">
+                        <h4>Görev Alanı Kuralları</h4>
+                        <p>Aktif operasyon bölgesine izinsiz girmek, sivilleri tehlikeye atmak ve görev dışı araç kullanmak yasaktır.</p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <div class="rule-number">09</div>
+                    <div class="rule-content">
+                        <h4>Hesap Güvenliği</h4>
+                        <p>Hesap paylaşımı, hesap satışı ve başka birinin hesabına izinsiz erişim kesinlikle yasaktır.</p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <div class="rule-number">10</div>
+                    <div class="rule-content">
+                        <h4>Genel Düzen</h4>
+                        <p>Sunucu düzenini bozacak her türlü davranış, spam, flood ve provokasyon cezalandırılır. Disiplinli ve kurallara uygun oynayın.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="section-container">
+            <div class="cta-content">
+                <h2>Göreve <span class="accent">Hazır mısın?</span></h2>
+                <p>Türkiye'nin en kaliteli Askeri & Polisiye MTA Roleplay sunucusuna hemen katıl!</p>
+                <div class="cta-buttons">
+                    <a href="mtasa://185.255.92.62:29055" class="btn btn-primary btn-lg" id="ctaJoinBtn">
+                        <span class="btn-bg"></span>
+                        <span class="btn-content">🎮 Sunucuya Katıl</span>
+                    </a>
+                    <button class="btn btn-discord btn-lg" onclick="copyDiscord()" id="ctaDiscordBtn">
+                        💬 Discord'a Katıl
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="anadolu.png" alt="Logo" class="footer-logo-img">
+                    <h3>Tekyıldız <span class="accent">Gaming</span></h3>
+                    <p>Türkiye'nin en kaliteli Askeri & Polisiye MTA Roleplay deneyimi. 2026'dan beri aktif.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Hızlı Linkler</h4>
+                    <a href="#hero">Ana Sayfa</a>
+                    <a href="#features">Özellikler</a>
+                    <a href="#servers">Sunucu</a>
+                    <a href="#rules">Kurallar</a>
+                </div>
+                <div class="footer-links">
+                    <h4>İndirmeler</h4>
+                    <a href="https://multitheftauto.com/" target="_blank">MTA İndir</a>
+                    <a href="https://dosya.co/6w45s1y2l3g6/Gta_san_andreas_-_500_MB.rar.html" target="_blank">GTA SA İndir</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Tekyıldız Gaming — Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <span class="toast-icon">✅</span>
+        <span class="toast-text" id="toastText">Kopyalandı!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
